@@ -4,8 +4,9 @@
 
   tasks:
     - name: Run show version
-      iosxr_command:
-        commands: show version
+      cisco.iosxr.iosxr_command:
+        commands:
+          - show version
       register: version_output
 
     - name: Save output
