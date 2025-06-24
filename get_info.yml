@@ -9,6 +9,12 @@
           - show version
           - show interfaces
           - show ip route
+          - show ospf neighbor
+          - show ipv6 interface brief
+          - show inventory
+          - show logging
+          - show users
+          - show tech-support
       register: version_output
 
     - name: Save output
