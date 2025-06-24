@@ -1,17 +1,14 @@
-- name: Collect network device facts 
+- name: Collect network device facts
   hosts: all
-  gather_facts: no 
+  gather_facts: no
 
+  tasks:
+    - name: Run show version
+      iosxr_command:
+        commands: show version
+      register: version_output
 
-  tasks: 
-   - name: Run show version 
-     ios_command:
-      commands: show version 
-     register: version_output
-
-
-   - name: Save outpput
-   
-     copy:
-      content: "{{ version_output.stdout[0]}}"
-      dest: "./outputs/how_version_{{ inventory_hostname}}.txt"
+    - name: Save output
+      copy:
+        content: "{{ version_output.stdout[0] }}"
+        dest: "./outputs/show_version_{{ inventory_hostname }}.txt"
