@@ -6,7 +6,6 @@
     - name: Run show version
       cisco.iosxr.iosxr_command:
         commands:
-          - show version
           - show interfaces
           - show ip route
           - show ospf neighbor
