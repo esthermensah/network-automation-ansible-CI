@@ -1,0 +1,6 @@
+++ Show tech start time: 2025-Jun-25.133812.UTC ++
+Wed Jun 25 13:38:13 UTC 2025 Waiting for gathering to complete
+...
+Wed Jun 25 13:38:22 UTC 2025 Compressing show tech output
+Show tech output available at 0/RP0/CPU0 : /harddisk:/showtech/showtech-DEMO-generic-2025-Jun-25.133812.UTC.tgz
+++ Show tech end time: 2025-Jun-25.133822.UTC ++

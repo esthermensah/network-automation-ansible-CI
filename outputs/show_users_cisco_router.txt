@@ -1,0 +1,2 @@
+Line            User                 Service  Conns   Idle        Location
+*  vty0            admin                ssh          0  00:00:03     10.10.20.28

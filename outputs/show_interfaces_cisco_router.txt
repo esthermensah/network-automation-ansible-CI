@@ -93,14 +93,14 @@ MgmtEth0/RP0/CPU0/0 is up, line protocol is up
   ARP type ARPA, ARP timeout 04:00:00
   Last input 00:00:00, output 00:00:00
   Last clearing of "show interface" counters never
-  5 minute input rate 0 bits/sec, 1 packets/sec
-  5 minute output rate 0 bits/sec, 1 packets/sec
-     168689 packets input, 19092434 bytes, 0 total input drops
+  5 minute input rate 1000 bits/sec, 1 packets/sec
+  5 minute output rate 5000 bits/sec, 1 packets/sec
+     169326 packets input, 19144766 bytes, 0 total input drops
      0 drops for unrecognized upper-level protocol
      Received 32 broadcast packets, 0 multicast packets
               0 runts, 0 giants, 0 throttles, 0 parity
      0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
-     122649 packets output, 23733297 bytes, 0 total output drops
+     123215 packets output, 24259059 bytes, 0 total output drops
      Output 0 broadcast packets, 0 multicast packets
      0 output errors, 0 underruns, 0 applique, 0 resets
      0 output buffer failures, 0 output buffers swapped out

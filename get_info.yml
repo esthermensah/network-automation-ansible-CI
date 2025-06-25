@@ -2,21 +2,25 @@
   hosts: all
   gather_facts: no
 
+  vars:
+    commands:
+      - show interfaces
+      - show ip route
+      - show ospf neighbor
+      - show ipv6 interface brief
+      - show inventory
+      - show logging
+      - show users
+      - show tech-support
+
   tasks:
-    - name: Run show version
+    - name: Run all commands
       cisco.iosxr.iosxr_command:
-        commands:
-          - show interfaces
-          - show ip route
-          - show ospf neighbor
-          - show ipv6 interface brief
-          - show inventory
-          - show logging
-          - show users
-          - show tech-support
+        commands: "{{ commands }}"
       register: version_output
 
-    - name: Save output
+    - name: Save each command output to a separate file
+      loop: "{{ range(0, commands | length) | list }}"
       copy:
-        content: "{{ version_output.stdout[0] }}"
-        dest: "./outputs/show_version_{{ inventory_hostname }}.txt"
+        content: "{{ version_output.stdout[item] }}"
+        dest: "./outputs/{{ commands[item] | regex_replace(' ', '_') }}_{{ inventory_hostname }}.txt"
